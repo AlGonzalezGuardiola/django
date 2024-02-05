@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ra6u0-e1=gr$xah2c$x-hc8io6@%b9#vu5)1_pbc2y158ie_6k'
+SECRET_KEY = 'django-insecure-munuo#vvbb%+rqg)&&%ns43z3(mcz5+jyj7hr)=fhichc4tq1&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'aplicacion'
+    'appgestor'
 ]
 
 MIDDLEWARE = [
@@ -77,11 +77,12 @@ WSGI_APPLICATION = 'gestor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gestordecontras',
+        'NAME': 'clase',
         'USER': 'postgres',
         'PASSWORD': 'Arrabal 308',
         'HOST': 'localhost',
         'PORT': '5432'
+
     }
 }
 
