@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'gestor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'clase',
+        'NAME': 'gestor3',
         'USER': 'postgres',
         'PASSWORD': 'Arrabal 308',
         'HOST': 'localhost',
