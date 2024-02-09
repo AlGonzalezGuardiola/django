@@ -71,3 +71,6 @@ def contar_nombres(request):
 
     posts = Usuario.objects.filter(username = username).count()
     return JsonResponse({"count": posts})
+
+#@csrf_exempt
+#def 
