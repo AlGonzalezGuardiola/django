@@ -1,0 +1,22 @@
+# docker-compose.yml
+version: '2'
+services:
+    db:
+      image: postgres:14
+      environment:
+          POSTGRES_PASSWORD: pass123
+          POSTGRES_USER: postgres
+          POSTGRES_DB: gestor3
+      ports:
+        - "5432:5432"
+
+    web:
+        build: .
+        #command: sh "python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
+        ports:
+            - "8000:8000"
+        volumes:
+            - ".:/scripts.sh"
+
+        depends_on:
+            - db
