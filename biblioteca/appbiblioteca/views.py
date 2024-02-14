@@ -20,7 +20,7 @@ def añadir_libro(request):
 @csrf_exempt
 def listar_libros(request):
     libros = Libro.objects.values('id', 'titulo', 'num_paginas')
-    return JsonResponse({'usuarios': list(libros)})
+    return JsonResponse({'libros': list(libros)})
 
 @csrf_exempt
 def mi_vista_sin_proteccion_csrf(request):
