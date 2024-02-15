@@ -64,3 +64,10 @@ def mi_vista_sin_proteccion_csrf(request):
     return JsonResponse("Esta vista no tiene protección CSRF.")
 
 
+@csrf_exempt
+def contar_nombres(request):
+    data = json.loads(request.body)
+    nombre = data.get('nombre')
+
+    posts = Socio.objects.filter(nombre = nombre).count()
+    return JsonResponse({"Cuantos hay": posts})
